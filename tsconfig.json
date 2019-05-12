@@ -9,7 +9,7 @@
     "jsx": "react",
     "moduleResolution": "node",
     "rootDirs": ["src", "stories"],
-    "baseUrl": "src",
+    "baseUrl": ".",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -20,7 +20,10 @@
     "declaration": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "@storyRoot/*": ["./stories/*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "build", "scripts"]
