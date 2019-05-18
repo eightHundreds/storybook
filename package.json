@@ -8,7 +8,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "storybook-to-ghpages":"storybook-to-ghpages",
-    "storybook-to-ghpages-via-ci":"npm run deploy-storybook -- --ci"
+    "storybook-to-ghpages-via-ci":"storybook-to-ghpages --ci"
   },
   "author": "",
   "license": "ISC",
