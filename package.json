@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "storybook-to-ghpages":"storybook-to-ghpages",
+    "storybook-to-ghpages-via-ci":"npm run deploy-storybook -- --ci"
   },
   "author": "",
   "license": "ISC",
@@ -25,6 +27,7 @@
     "@storybook/addon-storysource": "^5.0.11",
     "@storybook/addons": "^5.0.11",
     "@storybook/react": "^5.0.11",
+    "@storybook/storybook-deployer": "^2.8.1",
     "@types/storybook__addon-actions": "^3.4.2",
     "@types/storybook__addon-centered": "^3.4.0",
     "@types/storybook__addon-knobs": "^5.0.0",
