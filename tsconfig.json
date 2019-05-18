@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "build/lib",
-    "module":"es2015",
+    "module": "es2015",
     "target": "es5",
     "lib": ["es5", "es6", "es7", "es2017", "dom"],
     "sourceMap": true,
@@ -21,10 +21,12 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "types": ["react"],
+    "typeRoots": ["./node_module/@types", "./types"],
     "paths": {
       "@storyRoot/*": ["./stories/*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "types/global.d.ts"],
   "exclude": ["node_modules", "build", "scripts"]
 }

@@ -15,6 +15,27 @@ module.exports = ({ config }) => {
       }
     ]
   });
+  config.module.rules.push({
+    test: /\.scss$/,
+    use: [
+      {
+        loader: "style-loader"
+      },
+      {
+        loader: "css-loader",
+        options: {
+          modules: true,
+          sourceMap: true,
+          localIdentName: "[local]"
+        }
+      },
+      {
+        loader: "sass-loader"
+      }
+    ]
+  });
+
+
   config.resolve.extensions.push(".ts", ".tsx");
   config.resolve.alias = {
     ...config.resolve.alias,
