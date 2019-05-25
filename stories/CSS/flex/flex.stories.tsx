@@ -79,6 +79,19 @@ storiesOf("CSS|flex", module, {
       </Wrapper>
     );
   })
+  .add('margin of flex item no collapse', () => {
+    const Box = styled.div`
+      display:flex;
+      margin:0 10px;
+    `
+    return <Container border>
+      <Box className="box">1</Box>
+      <Box className="box">2</Box>
+      <Box className="box">3</Box>
+    </Container>
+  },{
+    notes:'flex item 间的margin不坍缩'
+  })
   .add("children flex item out of flow", () => {
     return (
       <Container
@@ -90,7 +103,8 @@ storiesOf("CSS|flex", module, {
         <div className="box">1</div>
         <div
           style={{
-            position: "absolute"
+            position: "absolute",
+            border: "1px solid red"
           }}
           className="box"
         >
@@ -99,6 +113,8 @@ storiesOf("CSS|flex", module, {
         <div className="box">3</div>
       </Container>
     );
-  },{
-    notes:"TODO"
-  });
+  }, {
+      notes: {
+        markdown: "绝对定位的flex-item,不参与flex计算,所处位置是`静态位置`,该位置受`just-content`影响,就像flex-container只有它一个元素"
+      }
+    });
