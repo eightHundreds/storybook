@@ -3,12 +3,21 @@
     "outDir": "build/lib",
     "module": "es2015",
     "target": "es5",
-    "lib": ["es5", "es6", "es7", "es2017", "dom"],
+    "lib": [
+      "es5",
+      "es6",
+      "es7",
+      "es2017",
+      "dom"
+    ],
     "sourceMap": true,
     "allowJs": false,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDirs": ["src", "stories"],
+    "rootDirs": [
+      "src",
+      "stories"
+    ],
     "baseUrl": ".",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
@@ -21,12 +30,29 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "types": ["react"],
-    "typeRoots": ["./node_module/@types", "./types"],
+    "types": [
+      "react"
+    ],
+    "typeRoots": [
+      "./node_module/@types",
+      "./types"
+    ],
     "paths": {
-      "@storyRoot/*": ["./stories/*"]
+      "@storyRoot/*": [
+        "./stories/*"
+      ]
     }
   },
-  "include": ["src/**/*", "types/global.d.ts"],
-  "exclude": ["node_modules", "build", "scripts"]
+  "include": [
+    "src/**/*",
+    "stories/**/*"
+  ],
+  "files": [
+    "./types/global.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts"
+  ]
 }

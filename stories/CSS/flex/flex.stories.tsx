@@ -4,7 +4,6 @@ import { select } from "@storybook/addon-knobs";
 import { storiesOf } from "@storyRoot/utils";
 import BasicMd from "./basic.md";
 import "./flex.scss";
-
 interface ContainerProps {
   border?: boolean;
 }
@@ -89,9 +88,9 @@ storiesOf("CSS|flex", module, {
       <Box className="box">2</Box>
       <Box className="box">3</Box>
     </Container>
-  },{
-    notes:'flex item 间的margin不坍缩'
-  })
+  }, {
+      notes: 'flex item 间的margin不坍缩'
+    })
   .add("children flex item out of flow", () => {
     return (
       <Container

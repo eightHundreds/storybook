@@ -12,8 +12,13 @@ module.exports = ({ config }) => {
       // Optional
       {
         loader: require.resolve("react-docgen-typescript-loader")
-      }
+      },
     ]
+  });
+  config.module.rules.push({
+    test: /\.stories.(ts|tsx)$/,
+    loaders: [require.resolve('@storybook/addon-storysource/loader')],
+    enforce: 'pre',
   });
   config.module.rules.push({
     test: /\.scss$/,
