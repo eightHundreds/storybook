@@ -15,11 +15,11 @@ module.exports = ({ config }) => {
       },
     ]
   });
-  config.module.rules.push({
-    test: /\.stories.(ts|tsx)$/,
-    loaders: [require.resolve('@storybook/addon-storysource/loader')],
-    enforce: 'pre',
-  });
+  // config.module.rules.push({
+  //   test: /\.stories.(ts|tsx)$/,
+  //   loaders: [require.resolve('@storybook/addon-storysource/loader')],
+  //   enforce: 'pre',
+  // });
   config.module.rules.push({
     test: /\.scss$/,
     use: [
